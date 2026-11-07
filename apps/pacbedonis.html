@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacbedonis — multislice CBED, PACBED and STEM images on a phone</title>
+<meta name="description" content="Calculates CBED, PACBED and STEM images of perfect crystals by the multislice method, and estimates specimen thickness from a PACBED you photographed.">
+<link rel="stylesheet" href="../style.css?v=2">
+</head>
+<body>
+<main>
+
+<p class="site-nav"><a href="../index.html">Apps</a> &rsaquo; Pacbedonis</p>
+
+<img class="hero" src="../assets/pacbedonis-hero.png" alt="Pacbedonis" width="1024" height="500">
+
+<h1>Pacbedonis</h1>
+
+<p>Pacbedonis calculates electron diffraction and scanning transmission electron microscope
+images of perfect crystals by the multislice method. Run a calculation and change the
+conditions in your hand, at the instrument or on the way there.</p>
+
+<p>Solve the exit wave once and CBED, PACBED and the STEM image all come out of it. The
+thickness series is recorded on the way through the same calculation, so it costs no extra
+time.</p>
+
+<p class="meta">Not on Google Play yet. This page describes the app as it stands;
+the store link will appear here when it is published.</p>
+
+<h2>Step by step</h2>
+
+<div class="step">
+  <img src="../assets/pacbedonis-1.png" alt="Pacbedonis title screen with the calculation queue and saved results" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">1</span>One calculation, three outputs</h3>
+    <p>Pick a structure and start a calculation. One probe gives CBED; scanning the unit cell and averaging gives PACBED; integrating a detector angular range at each position gives the STEM image.</p>
+    <p>Calculations go through a queue, and what comes out is kept under saved results, so a long run does not have to be repeated to look at it again.</p>
+  </div>
+</div>
+
+<div class="step alt">
+  <img src="../assets/pacbedonis-2.png" alt="Choosing the crystal structure to calculate" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">2</span>Choose the structure</h3>
+    <p>Si, SrTiO<sub>3</sub>, GaAs and Au are there as samples, or open a CIF of your own. A CIF with symmetry operations is used as-is; one with only a space-group symbol is expanded from that symbol.</p>
+    <p>What the app can handle is stated on the screen rather than buried: perfect crystals with unit-cell periodicity. Defects, interfaces and grain boundaries are out of scope.</p>
+  </div>
+</div>
+
+<div class="step">
+  <img src="../assets/pacbedonis-3.png" alt="Searching the bundled CIF list by element" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">3</span>Or take one from the 56,741 bundled</h3>
+    <p>Search by name or formula, or pick elements on the periodic table to narrow the bundled list down. Star the ones you use often.</p>
+  </div>
+</div>
+
+<div class="step alt">
+  <div class="trio">
+    <img src="../assets/pacbedonis-4.png" alt="CBED patterns calculated for 50, 100 and 200 nm (50 nm)" width="118" height="241">
+    <img src="../assets/pacbedonis-5.png" alt="CBED patterns calculated for 50, 100 and 200 nm (100 nm)" width="118" height="241">
+    <img src="../assets/pacbedonis-6.png" alt="CBED patterns calculated for 50, 100 and 200 nm (200 nm)" width="118" height="241">
+  </div>
+  <div class="text">
+    <h3><span class="n">4</span>Watch it change with thickness</h3>
+    <p>The thickness series comes out of the same calculation, so a slider steps through it rather than re-running. These three are the same crystal at 50.4, 100.7 and 200.3 nm, all from one 24.9 second run.</p>
+    <p>The angular range and the thickness are printed above the slider, so the picture you are looking at always carries the conditions that made it.</p>
+  </div>
+</div>
+
+<div class="step">
+  <img src="../assets/pacbedonis-7.png" alt="PACBED and detector images, with thickness estimation" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">5</span>Thickness from your own PACBED</h3>
+    <p>Load a PACBED you photographed and the app matches it against the calculated thickness series. Rotation, scale and a shifted centre are fitted automatically.</p>
+    <p><strong>This matching is an experimental feature.</strong> It has only been verified against synthetic patterns; the centre offset, moire and non-linear brightness of a real capture are not accounted for. Treat the result as an indication.</p>
+  </div>
+</div>
+
+<div class="step alt">
+  <img src="../assets/pacbedonis-8.png" alt="Searching the Crystallography Open Database" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">6</span>Pull a structure from the open database</h3>
+    <p>Search by material name or formula. This is the only part of the app that uses the network.</p>
+  </div>
+</div>
+
+<h2>Good to know</h2>
+
+<ul>
+  <li>The probe is built from the aperture, defocus, spherical aberration, astigmatism and
+      coma. The app measures the resulting intensity distribution and reports the probe
+      diameter at half maximum, so you see what you actually made. A source size &mdash; the
+      incoherent blur &mdash; can be included</li>
+  <li>STEM detectors: BF, ABF, HAADF, centre of mass, iDPC, 4-segment DPC, and custom ranges</li>
+  <li>4D-STEM &mdash; the diffraction pattern at every probe position can be saved</li>
+  <li>Elastic scattering factors from Lobato &amp; Van Dyck (2014), Z = 1 to 103</li>
+  <li>Thermal diffuse scattering is treated as an absorptive potential (Thomas, Cleverley
+      &amp; Beanland 2024). HAADF is taken from the absorption, because a coherent calculation
+      never puts thermal diffuse scattering at high angles and integrating the exit wave
+      underestimates HAADF by an order of magnitude</li>
+</ul>
+
+<h2>Your data</h2>
+
+<p>Everything is calculated on the device. The app has no account, collects no personal information, and sends nothing to us. Searching the Crystallography Open Database is the only time it reaches the network, and that request carries only your search words.</p>
+
+<p>See the <a href="../privacy-en.html">privacy policy</a>
+(<a href="../privacy-ko.html" hreflang="ko">한국어</a> &middot;
+<a href="../privacy.html" hreflang="ja">日本語</a>) and the
+<a href="../terms-en.html">terms of use</a>
+(<a href="../terms-ko.html" hreflang="ko">한국어</a> &middot;
+<a href="../terms.html" hreflang="ja">日本語</a>).</p>
+
+<h2>Contact</h2>
+
+<p>Email: <a href="mailto:labonisapps@gmail.com">labonisapps@gmail.com</a></p>
+
+</main>
+</body>
+</html>

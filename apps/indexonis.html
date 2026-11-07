@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indexonis — index a SAED pattern from a photograph</title>
+<meta name="description" content="Reads a photograph of a selected-area electron diffraction pattern, reads the scale bar, detects the spots and gives you d-spacings, the zone axis and hkl.">
+<link rel="stylesheet" href="../style.css?v=2">
+</head>
+<body>
+<main>
+
+<p class="site-nav"><a href="../index.html">Apps</a> &rsaquo; Indexonis</p>
+
+<img class="hero" src="../assets/indexonis-hero.png" alt="Indexonis" width="1024" height="500">
+
+<h1>Indexonis</h1>
+
+<p>Indexonis reads a photograph of a selected-area electron diffraction (SAED) pattern
+taken on a transmission electron microscope and identifies the crystal. You can index a
+pattern in front of the instrument, or later when you look back at your data.</p>
+
+<p>Every intermediate result is shown on screen and can be corrected. Nothing is decided
+behind your back.</p>
+
+<p class="meta">Not on Google Play yet. This page describes the app as it stands;
+the store link will appear here when it is published.</p>
+
+<h2>Step by step</h2>
+
+<div class="step">
+  <img src="../assets/indexonis-1.png" alt="Indexonis title screen with its four entry points" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">1</span>Start from a photograph &mdash; or from the microscope file itself</h3>
+    <p>Load a pattern you photographed off the screen of the microscope. A shot taken at an angle is straightened first, so you do not have to line the camera up perfectly.</p>
+    <p>Native microscope files (<code>.dm3</code>, <code>.dm4</code>, <code>.emd</code>) open directly. There is also FFT analysis from lattice fringes, and a diffraction simulator you can drive from the CIF list. 56,741 structures are bundled and work offline.</p>
+  </div>
+</div>
+
+<div class="step alt">
+  <img src="../assets/indexonis-6.png" alt="Reading the scale bar from the photograph" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">2</span>The scale bar is read for you</h3>
+    <p><code>0.20 1/A</code>, <code>2.0 1/nm</code>, <code>5 nm^-1</code> and the other notations instruments use are all handled. The camera constant comes from the number, the unit and the bar length, so nothing has to be typed in.</p>
+    <p>The screen shows the cropped region it read, the same region with the recognised text drawn over it, the detected bar length in pixels, and the resulting value. If the bar was hard to read, type the number in yourself.</p>
+  </div>
+</div>
+
+<div class="step">
+  <img src="../assets/indexonis-2.png" alt="The CIF list, with search by name and by element" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">3</span>Pick what to match against</h3>
+    <p>The CIF list searches by name or formula, or by picking elements on the periodic table. Structures you come back to can be starred to keep them at the top.</p>
+    <p>Tapping a CIF opens its detail screen, which is also the way in to the diffraction simulation.</p>
+  </div>
+</div>
+
+<div class="step alt">
+  <img src="../assets/indexonis-3.png" alt="Searching the Crystallography Open Database" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">4</span>Or search the open database</h3>
+    <p>When the structure is not on hand, search the Crystallography Open Database by material name or formula and pull the CIF down. This is the only part of the app that uses the network.</p>
+  </div>
+</div>
+
+<div class="step">
+  <img src="../assets/indexonis-4.png" alt="Simulating a diffraction pattern for a chosen zone axis" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">5</span>Simulate the pattern you expect to see</h3>
+    <p>Give a structure and a zone axis as <em>u v w</em>, and the app draws the pattern it should produce. Camera length, spot size, thickness, text size and rotation are all adjustable, and you can switch between kinematical and dynamical (two-beam) intensities.</p>
+    <p>Forbidden reflections are marked, so an extinction rule that has been broken is visible rather than silently ignored.</p>
+  </div>
+</div>
+
+<div class="step alt">
+  <img src="../assets/indexonis-5.png" alt="Candidate structures ranked by match score with indexed spots" width="186" height="380">
+  <div class="text">
+    <h3><span class="n">6</span>Read off the candidates, with the numbers behind them</h3>
+    <p>Candidates come back sorted by match score, each with the indexed reflections drawn over your own pattern and a table of theoretical against measured d-spacings.</p>
+    <p>Absolute matching (real distances, from the scale bar) and ratio matching (distance ratios and angles only) are shown together. <strong>The app does not pick one for you.</strong> When the two disagree, that is your hint that the scale bar was read wrongly.</p>
+  </div>
+</div>
+
+<h2>Good to know</h2>
+
+<ul>
+  <li>The pattern centre is estimated from the inversion symmetry of the reflections, then
+      refined by a Gaussian fit on the transmitted beam. If no inversion centre is found it
+      falls back to the largest bright blob, and the app tells you which of the two answered,
+      because they can disagree</li>
+  <li>Spots are fitted to sub-pixel accuracy</li>
+  <li>The ratio result states, as a percentage, how far the camera constant it implies sits
+      from your calibration value</li>
+</ul>
+
+<h2>Your data</h2>
+
+<p>Everything is calculated on the device. The app has no account, collects no personal information, and sends nothing to us. Searching the Crystallography Open Database is the only time it reaches the network, and that request carries only your search words.</p>
+
+<p>See the <a href="../privacy-en.html">privacy policy</a>
+(<a href="../privacy-ko.html" hreflang="ko">한국어</a> &middot;
+<a href="../privacy.html" hreflang="ja">日本語</a>) and the
+<a href="../terms-en.html">terms of use</a>
+(<a href="../terms-ko.html" hreflang="ko">한국어</a> &middot;
+<a href="../terms.html" hreflang="ja">日本語</a>).</p>
+
+<h2>Contact</h2>
+
+<p>Email: <a href="mailto:labonisapps@gmail.com">labonisapps@gmail.com</a></p>
+
+</main>
+</body>
+</html>

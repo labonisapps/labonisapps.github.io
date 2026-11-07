@@ -1,0 +1,5 @@
+# このサイトは4本（Indexonis / Crystonis / Spectronis / Pacbedonis）専用。
+# 索引を妨げない。旧サイト（geekonissupport.github.io）側に置いていた
+# Disallow は、4本のポリシーをここへ移したので不要になる。
+User-agent: *
+Allow: /
